@@ -1,0 +1,17 @@
+extends layout
+
+block content
+ div(class="update-status")
+  H3 UPDATE STATUS  FOR   #{username} 
+ div(align="center")
+  table(class= "table table-bordered")
+    thead
+      tr
+        th Username
+        th Details
+        th Time
+    each val, index in result
+      tr
+        each item,i in val
+           <td>#{item}</td>
+         

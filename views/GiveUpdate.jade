@@ -1,0 +1,22 @@
+extends layout
+block content
+ 
+
+ DIV(ALIGN="CENTER")
+  h1 GIVE UPDATE ---  KEEP AS SHORT AS POSSIBLE :P
+  <br />
+  <br />
+ div(class="container")
+  form(role="form" method="POST" action="/GiveUpdate")
+    div(class="form-group")
+      textarea(class="form-control" rows="5" name="txtar1")
+
+      STATUS OF UPDATE
+      textarea(class="form-control" rows="2" name="txtar2")
+      
+      <br />
+      <br />
+ 
+
+    input(type="submit" class="btn btn-primary" name="submit" value="submit")
+    

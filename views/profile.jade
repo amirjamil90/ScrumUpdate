@@ -1,0 +1,17 @@
+extends layout
+block content
+  DIV(align="right")
+    form(method="get" action="/logout")
+      input(type="submit"  class="btn btn-primary" name="logout" id="logout" value="LOG OUT")
+  DIV(align="center")
+   h1  DASHBOARD
+  <br /><br />
+  form(method="POST" role="form" action="/ViewUpdate")
+   div(class="form-group" align="center")
+    p
+     input(type="submit" class="btn btn-primary" name="submit" value="View Your Update")
+  form(role="form" method="get" action="/GiveUpdate")
+    div(class="form-group" align="center")
+     p
+       input(type="submit"  class="btn btn-primary" name="submit" value="Give Update")
+
