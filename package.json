@@ -1,6 +1,6 @@
 {
-  "name": "todo",
-  "version": "0.0.0",
+  "name": "todo-amir",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -14,5 +14,10 @@
     "jade": "~1.9.2",
     "morgan": "~1.5.3",
     "serve-favicon": "~2.2.1"
-  }
+  },
+  "scripts":{
+      "start" : "app.js"
+   },
+   "main" : "server.js"
 }
+
