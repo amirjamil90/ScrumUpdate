@@ -14,10 +14,12 @@ var UpdateStatus=require('./routes/UpdateStatus');
 var logout=require('./routes/logout');
 var session=require('express-session');
 var app = express();
+var port =  process.env.OPENSHIFT_NODEJS_PORT || 8080;   // Port 8080 if you run locally
+var address =  process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1"; // Listening to localhost if you run locally
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-app.set('port', (process.env.PORT || 5000));
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
@@ -38,8 +40,6 @@ app.use('/GiveUpdate',GiveUpdate);
 app.use('/UpdateStatus',UpdateStatus);
 app.use('/logout',logout);
 
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
-});
+app.listen(port, address);
 
 module.exports = app;
